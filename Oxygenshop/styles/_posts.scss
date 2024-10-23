@@ -1,0 +1,264 @@
+.posts {
+    background-color: #F7F7F7;
+    padding-top: 3.3em;
+    padding-bottom: 7.3em;
+
+    &__box {
+        background-color: #FFFFFF;
+        border: 0.0625rem solid #E8E9ED;
+        border-radius: 0.3125rem;
+        max-width: 19.6em;
+        margin: 0 auto;
+        margin-bottom: 3.1em;
+
+        &__image-container {
+            margin-top: 6em;
+            position: relative;
+
+            &__image {
+                display: inline-block;
+                z-index: 10;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                &--laptop {
+                    transform: translate(calc(-50% - .5em), -50%);
+                }
+
+                &--phone {
+                    transform: translate(calc(-50% + 1.6em), calc(-50% - .6em));
+                }
+
+                &--trumpet {
+                    transform: translate(calc(-50% - 1.2em), calc(-50% + 3.3em));
+                }
+            }
+
+            &__bg {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                &--red-mobile {
+                    transform: translate(calc(-50% + 3em), calc(-50% - 1.8em));
+                }
+
+                &--red-desktop {
+                    display: none;
+                }
+
+                &--blue {
+                    transform: translate(-50%, calc(-50% - 1.1em));
+                }
+
+                &--green {
+                    transform: translate(-50%, calc(-50% + 1.1em));
+                }
+            }
+        }
+
+        &__text-container {
+            &__title {
+                font-family: "Raleway", sans-serif;
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 2.1875rem;
+                margin: .6em;
+                margin-top: 5.6em;
+
+                &--increase {
+                    margin-top: .8em;
+                }
+            }
+
+            &__subtitle {
+                font-family: "Open Sans", sans-serif;
+                font-weight: 400;
+                font-size: 0.875rem;
+                line-height: 1.3125rem;
+                margin: 1.6em;
+
+                &--be-always-first {
+                    margin-top: 3em;
+                    padding-bottom: .6em;
+                }
+
+                &--your-shop {
+                    margin-top: .7em;
+                    padding-bottom: .5em;
+                }
+
+                &--increase {
+                    margin: .7em 1.2em;
+                    font-size: 1rem;
+                    line-height: 1.3125rem;
+                }
+            }
+
+            &__line {
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1000px) {
+        padding-bottom: .8em;
+
+        &__box {
+            max-width: none;
+            height: 21.5em;
+            margin: 0 10em;
+            margin-bottom: 3.1em;
+            justify-content: space-between; 
+            
+
+            &--increase {
+                background-color: transparent;
+                border: none;
+                display: flex;
+            }
+
+            &__image-container {
+                &--increase {
+                    margin: 0;
+                    width: 80%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                &__image {
+                    top: auto;
+                    left: auto;
+                    transform: none;
+
+                    &--laptop {
+
+                        bottom: -13.5em;
+                        right: 5em;
+                        width: 30%;
+                        max-width: 63em;
+                    }
+
+                    &--phone {
+                        bottom: -13.5em;
+                        left: 3.5em;
+                        width: 24%;
+                        max-width: 24em;
+                    }
+
+                    &--trumpet {
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(calc(-50% + 1em), calc(-50% + 2em));
+                        width: 80%;
+                        max-width: 53em;
+                    }
+                }
+
+                &__bg {
+                    top: auto;
+                    left: auto;
+                    transform: none; // uso esto para revertir  modificaciones y colocar la imagen en la posición que le corresponde según las propiedades bottom y right.
+
+                    &--red-mobile {
+                        display: none;
+                    }
+
+                    &--red-desktop {
+                        display: block;
+                        bottom: -12.5em;
+                        right: 3.5em;
+                        width: 20%;
+                        max-width: 16em;
+                    }
+
+                    &--blue {
+                        bottom: -13.5em;
+                        left: 3.5em;
+                        width: 20%;
+                        max-width: 19em;
+                    }
+
+                    &--green {
+                        margin: 0;
+                        width: 90%;
+                        height: 100%;
+                        position: relative;
+                    }
+                }
+            }
+
+            &__text-container {
+                position: relative;
+                width: 45%; 
+                padding-right: 1em; 
+
+                &--your-shop {
+                    position: absolute;
+                    right: 10em;
+                }
+
+                &--increase {
+                    padding-top: 2.5em;
+                    margin: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FFFFFF;
+                    border: 0.0625rem solid #E8E9ED;
+                    border-radius: 0.3125rem;
+                }
+
+                &__title {
+                    margin-top: -.5em;
+                    max-width: 10em;
+
+                    &--increase {
+                        padding-top: .7em;
+                        margin-top: 0;
+                        max-width: 10em;
+                    }
+                }
+
+                &__subtitle {
+                    width: 100%;
+                    max-width: 56em;
+                    font-size: 1em;
+
+                    &--be-always-first {
+                        margin-top: 2em;
+                    }
+
+                    &--your-shop {
+                        width: 100%;
+                    }
+
+                    &--increase {
+                        margin: 1.7em 1.2em;
+                        padding-top: .7em;
+                        font-size: rem;
+                        line-height: 1.3125rem;
+                    }
+                }
+
+                &__line {
+                    width: 40%;
+                    max-width: 18em;
+                    display: block;
+                    margin: 0 0 4em 1.3em;
+
+                    &--your-shop {
+                        width: 100%;
+                    }
+
+                    &--increase {
+                        padding-top: 1em;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
