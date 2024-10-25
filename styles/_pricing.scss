@@ -1,0 +1,222 @@
+.pricing {
+    text-align: center;
+
+
+    &__title {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 3em;
+        line-height: 2.625em;
+        
+    }
+     &__select{
+      
+        bottom:5em;
+        padding: 2em 3em;
+        border-radius: 2em;
+        cursor: pointer;
+        border-color: var(--shadow-secundary);
+        background: var(--shadow-secundary);  
+        outline: none;  
+    }
+   
+
+
+    &__content {
+        width: 100%;
+
+        
+
+        button {
+            border-radius: 1.5em; 
+            padding: 1.2em 4em; 
+            transform: translateY(-15%);
+            border: none;
+            color: white;
+            cursor: pointer;
+
+            &.red {
+                background-color: #EB476E;
+                transform: translateY(-40%);
+            }
+
+            &.blue {
+                background-color: #07ACE6;
+                transform: translateY(-40%);
+            }
+
+            &.green {
+                background-color: #55DFB4;
+                transform: translateY(-40%);
+            }
+        }
+
+
+
+        &__item {
+
+            border-radius: 1em;
+            margin-bottom: 15%;
+            height: 15.5em;
+            margin: 10%;
+
+            &.red {
+                border: 1px solid #EB476E;
+            }
+
+            &.blue {
+                border: 1px solid #07ACE6;
+            }
+
+            &.green {
+                border: 1px solid #55DFB4;
+            }
+
+            &__half {
+                width: 49%;
+                display: inline-block;
+                text-align: center;
+                position: relative;
+
+               
+                &--title {
+                    font-family: "Raleway", sans-serif;
+                    font-weight: 700;
+                    font-size: 1.25em; 
+                    line-height: 1.5em; 
+                    margin: 0;
+                
+                    &.red {
+                        margin-bottom: 1.5625em; 
+                    }
+                }
+
+                &--price {
+                    margin: 0;
+                    position: relative;
+                    top: -3em;
+                    top: 0px;
+                    font-family: "Open Sans", sans-serif;
+                    font-weight: 300;
+                    font-size: 3em;
+                    
+
+                    &.red {
+                        color: #EB476E;
+                        top: -30px;
+                    }
+
+                    &.blue {
+                        color: #07ACE6;
+                    }
+
+                    &.green {
+                        color: #55DFB4;
+                    }
+                }
+
+                &--text {
+                    position: relative;
+                    top: -15px;
+                    font-family: "Raleway", sans-serif;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 14px;
+                    margin-top: 2em;
+                   
+                }
+
+                ul {
+                    text-align: center;
+                    list-style: none;
+                    padding: 0;
+                    margin: 3em 0;
+
+                    li {
+                        font-family: "Open Sans", sans-serif;
+                        margin: 10px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 19px;
+                        text-align: start;
+                        width: 100%;
+
+                        .checkbox,
+                        .cross {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .pricing {
+        &__title {
+            margin-top: 3em;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: center;
+
+            button {
+                transform: translateY(30px);
+
+                &.red {
+                    transform: translateY(35px);
+                }
+                &.blue {
+                    transform: translateY(35px);
+                }
+                &.green {
+                    transform: translateY(35px);
+                }
+            }
+
+            &__item:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 15px #6495ED;
+            }
+
+            &__item {
+                margin: 5em 2em;
+                height: auto;
+                width: 400px;
+
+                &__half {
+                    width: 100%;
+                    text-align: center;
+                    position: static;
+
+                    &--title {
+                        margin-top: 3em;
+                    }
+
+                    &--price {
+                        &.red {
+                            margin-top: 0.5em;
+                        }
+                    }
+
+                    &--text {
+                        margin-top: 1em;
+                    }
+
+                    ul {
+                        li {
+                            text-align: center;
+                            margin: 1.5em 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+  

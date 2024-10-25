@@ -1,0 +1,23 @@
+
+* {
+    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+body {
+   min-width: 320px;
+}
+
+
+@import "_header.scss";
+@import "_features.scss";
+@import "_posts.scss";
+@import "_pricing.scss";
+@import "_form.scss";
+@import "_footer.scss";
+@import "_bar.scss";
+@import "_return.scss";
+@import "_invalidinputs.scss";
+@import "_popup.scss";
+
+

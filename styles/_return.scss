@@ -1,0 +1,21 @@
+.return-to-top {
+    display: none; 
+    position: fixed;
+    bottom: 9%;
+    left: 70%; 
+    transform: translateX(-50%);
+    background-color: #48affe; 
+    color: white;
+    border: none;
+    padding: 1em 1em;
+    border-radius: 20%;
+    font-size: 1.2em; 
+    cursor: pointer;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+ }
+ 
+ .return-to-top:hover {
+    background-color: #8c8c8c; /* Gris más oscuro en hover */
+    transform: translateX(-50%) translateY(-0.3em); /* Efecto de elevación */
+ }
