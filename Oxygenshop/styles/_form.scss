@@ -1,0 +1,204 @@
+.contact {
+    padding-bottom: 2.9em;
+
+    &__info {
+        width: 85%;
+        margin: 0 auto;
+
+        &__title {
+            font-family: "Raleway", sans-serif;
+            font-size: 2.5em;
+            font-weight: 400;
+            margin-bottom: 0.1em;
+        }
+
+        &__subtitle {
+            font-weight: 400;
+            margin-bottom: 2em;
+        }
+
+        &__types-container {
+            margin-bottom: 3.3em;
+
+            &__type {
+                margin-bottom: 0.9em;
+
+                &__description-img {
+                    margin-right: 0.4em;
+                }
+
+                &__contact {
+                    color: #A5A5A5;
+                }
+
+                &>* {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    &__form {
+        width: 85%;
+        margin: 0 auto;
+
+        &__text-input {
+            width: 100%;
+            display: block;
+            margin-bottom: 2.5em;
+            border: none;
+            border-bottom: 1px solid #95989A;
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        &__consent {
+            display: block;
+            margin-bottom: 1em;
+            position: relative;
+
+            &__label {
+                font-size: 0.75em;
+                font-weight: 400;
+                color: #707070;
+                margin-left: 2.5em;
+            }
+
+            &__checkbox {
+
+                display: inline-block;
+                width: 10%;
+                text-align: center;
+                color: #08A6E4;
+                transform: scale(2); 
+                transform-origin: center; 
+            }
+
+
+
+        }
+
+        &__label--uppercase {
+            font-size: 0.7em;
+            font-weight: 600;
+            color: #08A6E4;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.6em;
+        }
+
+        &__submit-button {
+            display: block;
+            margin-left: auto;
+            padding: 1.3em 7em;
+            background-color: #08A6E4;
+            color: white;
+            border: none;
+            border-radius: 35px;
+            font-size: 0.812em;
+            filter: drop-shadow(5px 10px 14px #07ACE64A);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* Alinea los elementos arriba */
+        padding: 4em 8em;
+
+        &__info {
+            width: 40%;
+            margin: 0;
+
+            &__title {
+                font-size: 3em;
+            }
+
+            &__subtitle {
+                font-size: 1.2em;
+                margin-bottom: 2.5em;
+            }
+
+            &__types-container {
+                display: flex;
+                /* Para alinear los iconos de contacto horizontalmente */
+                flex-wrap: wrap;
+                margin-bottom: 3.3em;
+
+                &__type {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 2em;
+
+                    &__description-img {
+                        margin-right: 0.4em;
+                        width: 30px;
+                        height: auto;
+                    }
+
+                    &__contact {
+                        font-size: 1.1em;
+                        color: #707070;
+                    }
+                }
+            }
+        }
+
+        &__form {
+            width: 50%;
+            /* Ajusta el ancho del formulario */
+            margin: 0;
+
+            &__text-input {
+                margin-bottom: 2em;
+                font-size: 1.1em;
+            }
+
+            &__consent {
+                margin-bottom: 1.5em;
+                display: flex;
+                align-items: center;
+
+                &__label {
+                    font-size: 1em;
+                    /* Ajusta el tamaño del texto del consentimiento */
+                    margin-left: 1.5em;
+                    max-width: 90%;
+                    /* Limita el ancho del texto */
+                }
+
+                &__custom-checkbox {
+                    width: 20px;
+                    height: 20px;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &__submit-button {
+                margin-left: auto;
+                padding: 1em 4em;
+                font-size: 1em;
+                background-color: #08A6E4;
+                color: white;
+                border: none;
+                border-radius: 35px;
+                filter: drop-shadow(5px 10px 14px rgba(7, 172, 230, 0.29));
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
