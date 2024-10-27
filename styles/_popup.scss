@@ -5,6 +5,7 @@
     height: 100%;
     justify-content: center;
     align-items: center;
+    
 }
 
 #modal {
@@ -15,10 +16,14 @@
     padding: 2em;
     z-index: 100;
     max-width: 90%;
-    background-image: linear-gradient(to bottom right, #375da5, #33c2d4);
+    max-width: 80%; /* Cambiado */
+    width: 600px; /* Ancho fijo */
+    height: auto; /* Mantener altura automática */
+    background-image: linear-gradient(to bottom right, #d4e0f6, #99b9be);
     border-radius: 1em;
     border: none;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
 }
 
 #modal::backdrop {

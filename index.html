@@ -12,7 +12,15 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <script src="js/scripts.js" defer></script>
+    
+    <script src="js/slider.js" defer></script>
+    <script src="js/form.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/return.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/moneda.js" defer></script>
+    <script src="js/modal.js" defer></script>
+
 </head>
 
 <body>
@@ -142,7 +150,7 @@
 
             <article class="pricing__content__item red">
                 <div class="pricing__content__item__half">
-                    <h1  idclass="pricing__content__item__half--title red">Basic</h1>
+                    <h1 class="pricing__content__item__half--title red">Basic</h1>
                     <p id="basic" class="pricing__content__item__half--price red">$0</p>
                 </div>
                 <div class="pricing__content__item__half">
@@ -193,9 +201,29 @@
                 <button class="button green">Begin</button>
             </article>
 
-        </div>
-
     </section>
+
+    <div class="slider">
+        <div class="slider__container" id="slider">
+            <img src="images/cielo.png.jpg" alt="picture slider" id="slide"
+                class="slider__container__slide" />
+            <img src="images/gato.png.jpg" alt="picture slider" id="slide"
+                class="slider__container__slide" />
+            <img src="images/perro.png.jpg" alt="picture slider" id="slide"
+                class="slider__container__slide" />
+            <img src="images/madera.png.jpg" alt="picture slider" id="slide"
+                class="slider__container__slide" />
+            <div class="slider__container__prev">&#10094</div>
+            <div class="slider__container__next">&#10095</div>
+            <div class="slider__container__dots">
+                <img id="dot" class="slider__container__dots__dot selected" src="images/circle.png" alt="dot" />
+                <img id="dot" class="slider__container__dots__dot" src="images/circle.png" alt="dot" />
+                <img id="dot" class="slider__container__dots__dot" src="images/circle.png" alt="dot" />
+                <img id="dot" class="slider__container__dots__dot" src="images/circle.png" alt="dot" />
+                
+            </div>
+        </div>
+    </div>
 
     <section class="contact">
         <div class="contact__info">
@@ -240,7 +268,7 @@
             <h2>Subscribe to our newsletter</h2>
             <form method="dialog">
                 <label>
-                    <input id="name_modal" class="name_modal" type="text" name="name" placeholder="NAME">
+                    
                     <input id="email_modal" class="email_modal" type="email" name="email" placeholder="EMAIL"><br>
                 </label>
                 <label>
