@@ -224,43 +224,114 @@
 // })
 
 
-// cambio de moneda
-const selector = document.getElementById('moneda');  // Selects the currency dropdown
-const basic = document.getElementById('basic');  // Selects the Basic price
-const professional = document.getElementById('professional');  // Selects the Professional price
-const premium = document.getElementById('premium');  // Selects the Premium price
+// // cambio de moneda
+// const selector = document.getElementById('moneda');  // Selects the currency dropdown
+// const basic = document.getElementById('basic');  // Selects the Basic price
+// const professional = document.getElementById('professional');  // Selects the Professional price
+// const premium = document.getElementById('premium');  // Selects the Premium price
 
-selector.addEventListener('change', () => {
-    const selectedCoin = selector.value;  // Gets the selected currency
-    const url = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
+// selector.addEventListener('change', () => {
+//     const selectedCoin = selector.value;  // Gets the selected currency
+//     const url = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
     
-    fetch(url)
-        .then((response) => {
-            if (response.ok) {
-                return response.json().then((data) => {
-                    if (selectedCoin === 'eur') {
-                        changePrice("€", data.usd.eur);
-                    } else if (selectedCoin === 'gbp') {
-                        changePrice("£", data.usd.gbp);
-                    } else if (selectedCoin === 'usd') {
-                        changePrice("$", data.usd.usd);
-                    }
-                });
-            } else {
-                throw new Error("Error on network response");
-            }
-        })
-        .catch((error) => {
-            console.log('Error: ' + error); 
-        });
-});
+//     fetch(url)
+//         .then((response) => {
+//             if (response.ok) {
+//                 return response.json().then((data) => {
+//                     if (selectedCoin === 'eur') {
+//                         changePrice("€", data.usd.eur);
+//                     } else if (selectedCoin === 'gbp') {
+//                         changePrice("£", data.usd.gbp);
+//                     } else if (selectedCoin === 'usd') {
+//                         changePrice("$", data.usd.usd);
+//                     }
+//                 });
+//             } else {
+//                 throw new Error("Error on network response");
+//             }
+//         })
+//         .catch((error) => {
+//             console.log('Error: ' + error); 
+//         });
+// });
 
-const changePrice = (symbol, conversion) => {
-    const basicPrice = 0;
-    const professionalPrice = (25 * conversion).toFixed(2);
-    const premiumPrice = (60 * conversion).toFixed(2);
+// const changePrice = (symbol, conversion) => {
+//     const basicPrice = 0;
+//     const professionalPrice = (25 * conversion).toFixed(2);
+//     const premiumPrice = (60 * conversion).toFixed(2);
 
-    basic.innerText = `${symbol}${basicPrice}`;  
-    professional.innerText = `${symbol}${professionalPrice}`;  
-    premium.innerText = `${symbol}${premiumPrice}`;  
-};
+//     basic.innerText = `${symbol}${basicPrice}`;  
+//     professional.innerText = `${symbol}${professionalPrice}`;  
+//     premium.innerText = `${symbol}${premiumPrice}`;  
+// // };
+// class Slider {
+//     constructor(sliderId) {
+//         // Selecciona el contenedor del slider usando el ID
+//         const sliderContainer = document.getElementById(sliderId);
+//         this.slides = document.querySelectorAll('.slider__container__slide'); // Selecciona las imágenes del slider
+//         this.dots = document.querySelectorAll('.slider__container__dots__dot'); // Selecciona los puntos del slider
+//         this.currentSlide = 0;
+//         this.maxSlide = this.slides.length - 1;
+//     }
+    
+//     slidePosition = () => {
+//         this.slides.forEach((slide, index) => {
+//             slide.style.transform = `translateX(${100 * (index - this.currentSlide)}%)`;
+//         });
+//     }
+
+//     nextSlide = () => {
+//         this.currentSlide === this.maxSlide ? this.currentSlide = 0 : this.currentSlide++;
+//     } 
+
+//     previousSlide = () => {
+//         this.currentSlide === 0 ? this.currentSlide = this.maxSlide : this.currentSlide--;
+//     }
+    
+//     setAutomatic = () => {
+//         setTimeout(() => {
+//             this.nextSlide();
+//             this.slidePosition();
+//             this.updateDots();
+//             this.setAutomatic();
+//         }, 5000);
+//     }
+
+//     updateDots = () => {
+//         this.dots.forEach((dot, index) => {
+//             index === this.currentSlide ? dot.classList.add('selected') : dot.classList.remove('selected');
+//         });
+//     }
+
+//     dotsHandle = () => {
+//         this.dots.forEach((dot, index) => {
+//             dot.addEventListener('click', () => {
+//                 this.currentSlide = index; // Cambié a 'this.currentSlide'
+//                 this.slidePosition();
+//                 this.updateDots();
+//             });
+//         });
+//     }
+// }
+
+// // Inicializa el slider pasando el ID
+// const slider = new Slider("slider"); // Solo se pasa el ID del contenedor
+// slider.slidePosition();
+// slider.setAutomatic();
+// slider.dotsHandle();
+
+// const nextButton = document.getElementsByClassName('slider__container__next')[0];
+// const prevButton = document.getElementsByClassName('slider__container__prev')[0];
+
+// nextButton.addEventListener('click', () => {
+//     slider.nextSlide();
+//     slider.slidePosition();
+//     slider.updateDots();
+// });
+
+// prevButton.addEventListener('click', () => {
+//     slider.previousSlide();
+//     slider.slidePosition();
+//     slider.updateDots();
+// });
+
