@@ -1,3 +1,92 @@
+// .slider {
+//     margin: 5% auto 9% auto;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     &__container {
+//         width: 100%;
+//         max-width: 900PX;
+//         height: 460px;
+//         position: relative;
+//         overflow: hidden;
+//         border-radius: 10px;
+//         background-color: black;
+
+//         &__slide {
+//             width: 100%;
+//             max-width: 900px;
+//             height: 350px;
+//             position: absolute;
+//             top: 12%;
+//             transition: all 0.5s;
+//         }
+
+//         &__prev,
+//         &__next {
+//             color: white;
+//             position: absolute;
+//             top: 45%;
+//             padding: .5em;
+//             border-radius: 10em;
+//             cursor: pointer;
+//         }
+
+//         &__prev {
+//             left: .5em;
+//         }
+
+//         &__next {
+//             right: .5em;
+//         }
+
+//         &__prev:hover,
+//         &__next:hover {
+//             background-color: rgba($color: #000000, $alpha: .7);
+//         }
+
+//         &__dots {
+//             position: absolute;
+//             bottom: .5em;
+//             left: 50%;
+//             transform: translateX(-50%);
+
+//             &__dot {
+//                 margin: auto .1em auto .1em;
+//                 width: .8em;
+//                 cursor: pointer;
+//                 padding: .1em;
+//             }
+
+//             &__dot:hover {
+//                 transform: scale(1.5);
+//             }
+
+//             &__dot.selected {
+//                 transform: scale(1.5);
+//             }
+//         }
+//     }
+
+// }
+
+// @media only screen and (max-width: 790px) {
+//     .slider {
+
+//         &__container {
+//             margin-top: 2.5em;
+//             max-width: 85%;
+//             max-height: 350px;
+
+//             &__slide {
+//                 max-height: 240px;
+//                 top: 15%
+//             }
+//         }
+//     }
+// }
+
+
 .slider {
     margin: 5% auto 9% auto;
     display: flex;
@@ -6,17 +95,17 @@
 
     &__container {
         width: 100%;
-        max-width: 740px;
-        height: 460px;
+        max-width: 56.25rem; // 900px ≈ 56.25rem
+        height: 28.75rem; // 460px ≈ 28.75rem
         position: relative;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 0.625rem; // 10px ≈ 0.625rem
         background-color: black;
 
         &__slide {
             width: 100%;
-            max-width: 740px;
-            height: 350px;
+            max-width: 56.25rem; // 900px ≈ 56.25rem
+            height: 21.875rem; // 350px ≈ 21.875rem
             position: absolute;
             top: 12%;
             transition: all 0.5s;
@@ -27,35 +116,35 @@
             color: white;
             position: absolute;
             top: 45%;
-            padding: .5em;
+            padding: 0.5em;
             border-radius: 10em;
             cursor: pointer;
         }
 
         &__prev {
-            left: .5em;
+            left: 0.5em;
         }
 
         &__next {
-            right: .5em;
+            right: 0.5em;
         }
 
         &__prev:hover,
         &__next:hover {
-            background-color: rgba($color: #000000, $alpha: .7);
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
         &__dots {
             position: absolute;
-            bottom: .5em;
+            bottom: 0.5em;
             left: 50%;
             transform: translateX(-50%);
 
             &__dot {
-                margin: auto .1em auto .1em;
-                width: .8em;
+                margin: auto 0.1em;
+                width: 0.8em;
                 cursor: pointer;
-                padding: .1em;
+                padding: 0.1em;
             }
 
             &__dot:hover {
@@ -67,20 +156,19 @@
             }
         }
     }
-
 }
 
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 49.375rem) { // 790px ≈ 49.375rem
     .slider {
 
         &__container {
             margin-top: 2.5em;
             max-width: 85%;
-            max-height: 350px;
+            max-height: 21.875rem; // 350px ≈ 21.875rem
 
             &__slide {
-                max-height: 240px;
-                top: 15%
+                max-height: 15rem; // 240px ≈ 15rem
+                top: 15%;
             }
         }
     }

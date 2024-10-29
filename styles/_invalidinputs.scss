@@ -1,6 +1,7 @@
 .input--invalid{
     border-bottom: 2px solid red !important;
 }
-.checkbox--invalid{
-    border: 2px solid red !important;
+.checkbox--invalid {
+    outline: 1px solid red !important;
+    outline-offset: 1px;  
 }

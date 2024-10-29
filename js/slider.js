@@ -2,24 +2,26 @@ class Slider {
     constructor(sliderId) {
         // Selecciona el contenedor del slider usando el ID
         const sliderContainer = document.getElementById(sliderId);
-        this.slides = document.querySelectorAll('.slider__container__slide'); // Selecciona las imágenes del slider
-        this.dots = document.querySelectorAll('.slider__container__dots__dot'); // Selecciona los puntos del slider
+        this.slides = document.querySelectorAll('.slider__container__slide'); 
+        this.dots = document.querySelectorAll('.slider__container__dots__dot'); 
         this.currentSlide = 0;
         this.maxSlide = this.slides.length - 1;
     }
     
     slidePosition = () => {
         this.slides.forEach((slide, index) => {
-            slide.style.transform = `translateX(${100 * (index - this.currentSlide)}%)`;
+            slide.style.transform = `translateX(${100 * (index - this.currentSlide)}%)`; //Calculo cuántas unidades de "100%" 
+            //mover  a laderecha.
         });
     }
 
     nextSlide = () => {
-        this.currentSlide === this.maxSlide ? this.currentSlide = 0 : this.currentSlide++;
+        this.currentSlide === this.maxSlide ? this.currentSlide = 0 : this.currentSlide++;  // si estamos en la ultima va al 0
+        // si no ala siguiente
     } 
 
     previousSlide = () => {
-        this.currentSlide === 0 ? this.currentSlide = this.maxSlide : this.currentSlide--;
+        this.currentSlide === 0 ? this.currentSlide = this.maxSlide : this.currentSlide--;// al reves
     }
     
     setAutomatic = () => {
@@ -40,7 +42,7 @@ class Slider {
     dotsHandle = () => {
         this.dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
-                this.currentSlide = index; // Cambié a 'this.currentSlide'
+                this.currentSlide = index; // 
                 this.slidePosition();
                 this.updateDots();
             });
@@ -48,8 +50,8 @@ class Slider {
     }
 }
 
-// Inicializa el slider pasando el ID
-const slider = new Slider("slider"); // Solo se pasa el ID del contenedor
+// Inicio o instancio una clase slider
+const slider = new Slider("slider"); // 
 slider.slidePosition();
 slider.setAutomatic();
 slider.dotsHandle();
